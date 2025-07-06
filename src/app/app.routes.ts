@@ -1,14 +1,19 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  // {
+  //   path: 'pokemons',
+  //   loadComponent: () => import('./pages/pokemons/pokemons-page.component'),
+  // },
+
+  //?cambios para generar las rutass de los pokemons en tiempo de cosntruccion
   {
-    path: 'pokemons',
+    path: 'pokemons/page/:page',
     loadComponent: () => import('./pages/pokemons/pokemons-page.component'),
   },
   {
     path: 'pokemon/:id',
     loadComponent: () => import('./pages/pokemon/pokemon-page.component'),
-    data: { prerender: false },
   },
   {
     path: 'about',

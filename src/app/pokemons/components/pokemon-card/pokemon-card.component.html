@@ -1,6 +1,9 @@
+<!--?cambios para generar las rutass de los pokemons en tiempo de cosntruccion -->
+<!-- es mejor paara ser seo friendly mandar el nombre del pokemon en lugar de tener un numero, lo bueno que la poke-api funciona exactamente igual que con el id -->
 <div
   class="h-44 bg-blue-500 bg-opacity-25 rounded-lg shadow-md flex flex-col p-4 items-center justify-center cursor-pointer"
-  [routerLink]="['/pokemon', pokemon().id]">
+  [routerLink]="['/pokemon', pokemon().name]">
+  <!-- [routerLink]="['/pokemon', pokemon().id]"> -->
 
 
   <img [src]="pokemonImage()" alt="ditto" class="w-24 h-24" width="96px" height="96px">
