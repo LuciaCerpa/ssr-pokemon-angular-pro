@@ -1,3 +1,3 @@
 # netlify.toml
 [build]
-  environment = { NODE_VERSION = "20" } # Or "18"
+  environment = { NODE_VERSION = "22", NETLIFY_ANGULAR_APP_PATH = "dist/pokemon-ssr" }
