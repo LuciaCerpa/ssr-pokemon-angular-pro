@@ -29,15 +29,15 @@ const TOTAL_PAGES = 5;
     `https://pokeapi.co/api/v2/pokemon?limit=${TOTAL_POKEMONS}`
   ).then((res) => res.json());
 
-  //console.log(pokemonNameList);
+  console.log(pokemonNameList);
 
   // for (let i = 0; i < pokemonNameList.length; i++) {
   //   fileContent += `\n/pokemon/${pokemonNameList[i].name}`;
   // }
 
-  fileContent += pokemonNameList.results.map(
-    (pokemon) => `\n/pokemon/${pokemon.name}`
-  );
+  fileContent += pokemonNameList.results
+    .map((pokemon) => `\n/pokemon/${pokemon.name}`)
+    .join("");
 
   //aqui va la ruta relativa, solo ponemos el nombre porque esta en la raiz del proyecto
   fs.writeFileSync("routes.txt", fileContent);
